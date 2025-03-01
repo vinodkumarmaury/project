@@ -350,7 +350,7 @@
 /* Moving Border Container Component */
 .moving-border-container {
   --border-radius: 0.5rem;
-  --border-width: 2px;
+  --border-width: 1px;
   --border-color-from: #d3d3d3;
   --border-color-to: #f0e68c;
   position: relative;
@@ -390,6 +390,15 @@
     background-position: 0% center;
   }
   100% {
-    background-position: -200% center;
+    background-position: -300% center;
+  }
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

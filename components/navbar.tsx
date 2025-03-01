@@ -104,7 +104,7 @@ export function Navbar() {
               className="hover:text-gray-400 flex h-12 w-full items-center text-[18px] transition-[color,transform] duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Features
+              FEATURES
             </Link>
           </li>
           <li className={getNavItemClass(1)}>
@@ -113,7 +113,7 @@ export function Navbar() {
               className="hover:text-gray-400 flex h-12 w-full items-center text-[18px] transition-[color,transform] duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Pricing
+              PRICING
             </Link>
           </li>
           <li className={getNavItemClass(2)}>
@@ -122,7 +122,7 @@ export function Navbar() {
               className="hover:text-gray-400 flex h-12 w-full items-center text-[18px] transition-[color,transform] duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Testimonials
+              CAREERS
             </Link>
           </li>
           <li className={getNavItemClass(3)}>
@@ -131,7 +131,7 @@ export function Navbar() {
               className="hover:text-gray-400 flex h-12 w-full items-center text-[18px] transition-[color,transform] duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              FAQ
+              CANTACT US
             </Link>
           </li>
         </ul>
