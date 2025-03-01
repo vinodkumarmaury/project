@@ -2,3 +2,15 @@
   padding-top: 2rem;
   background-color: black;
 }
+
+.letter {
+  display: inline-block;
+  color: #aaa;
+  animation: letterWave 3s infinite alternate;
+  animation-delay: calc(var(--delay, 0) * 1ms);
+  will-change: color;
+}
+
+.mr-space {
+  margin-right: 1ch;
+}

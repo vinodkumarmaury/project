@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { motion, AnimatePresence } from "framer-motion";
+import "@/styles/pricing-section.css"; // Add this import at the top
 
 const pricingPlans = [
   {
@@ -159,7 +160,7 @@ export function PricingSection() {
             const containerClasses = plan.customStyle
               ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-black dark:text-white overflow-hidden border-[1px] border-white/30"
               : isPro 
-                ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden border-2" 
+                ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden" // removed border-2
                 : "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden border-[1px] border-white/30";
 
             const currentPrice = isAnnual ? plan.priceYearly : plan.priceMonthly;
@@ -167,11 +168,7 @@ export function PricingSection() {
             return (
               <div 
                 key={index} 
-                className={containerClasses} 
-                style={isPro 
-                  ? {border: "2px solid #facc15", borderRadius: "1rem"} 
-                  : {borderRadius: "1rem"}
-                }
+                className={`${containerClasses} ${isPro ? 'pricing-card-pro' : 'pricing-card'}`}
               >
                 {plan.popular && (
                   <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
