@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
 import { InfiniteMovingImages } from "./ui/infinite-moving-images";
+import "@/styles/cta-section.css"; // import your CSS file
+import Image from "next/image";
+
 const logos = [
   <svg
     key="logo1"
@@ -78,9 +81,16 @@ const logos = [
       <circle cx="5" cy="19" r="1" />
     </g>
   </svg>,
+
+  <Image
+    key="logo5"
+    src="https://cdn.magicui.design/companies/Google.svg"
+    width={112}  // adjust dimensions as needed
+    height={32}
+    className="px-2 dark:brightness-0 dark:invert"
+    alt="Google"
+  />
 ];
-
-
 
 export function CTASection() {
   return (
@@ -125,13 +135,8 @@ export function CTASection() {
         </div>
       </div>
 
-      {/* Gradient overlay: from top (20% opaque black) to bottom (90% opaque black) */}
-      <div
-        className="absolute inset-0 z-10"
-        style={{
-          background: "linear-gradient(to bottom, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.9) 100%)"
-        }}
-      ></div>
+      {/* Gradient overlay — moved inline style into external CSS */}
+      <div className="absolute inset-0 z-10 cta-gradient"></div>
 
       {/* Foreground CTA Text */}
       <div className="relative z-20 mt-60 flex flex-col items-center text-center text-primary">

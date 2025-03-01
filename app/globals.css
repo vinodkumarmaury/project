@@ -319,18 +319,11 @@
   inset: 0;
   border-radius: var(--border-radius);
   padding: var(--border-width);
-  background: linear-gradient(
-    90deg,
-    #e5e7eb,
-    #f0e68c,
-    #e5e7eb,
-    #f0e68c
-  );
-  background-size: 200% 200%;
-  animation: move-border 4s linear infinite;
+  background: linear-gradient(90deg, #e5e7eb, #f0e68c, #e5e7eb, #f0e68c);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   pointer-events: none;
   z-index: 1;
 }
@@ -375,9 +368,9 @@
     var(--border-color-from),
     var(--border-color-to)
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude;
   -webkit-mask-composite: xor;
   background-size: 200% auto;
   animation: moving-border 4s linear infinite;

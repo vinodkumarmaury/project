@@ -78,9 +78,9 @@ function AnimatedPrice({ price, isAnimating }: { price: number, isAnimating: boo
     }
     
     const targetDigits = price.toString().split('');
-    const currentDigits = displayPrice.toString().split('');
-    const maxLength = Math.max(targetDigits.length, currentDigits.length);
-    
+    // Removed reading displayPrice for maxLength calculation.
+    const maxLength = targetDigits.length; 
+
     let step = 0;
     const interval = setInterval(() => {
       if (step >= maxLength) {
@@ -99,9 +99,10 @@ function AnimatedPrice({ price, isAnimating }: { price: number, isAnimating: boo
         step++;
         return parseInt(newDigits.join('') || '0');
       });
-    }, 100); // 100ms per digit for a roughly 1s total animation
+    }, 100); // 100ms per digit
     
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [price, isAnimating]);
   
   return displayPrice;

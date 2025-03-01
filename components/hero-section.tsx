@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
+import "@/styles/hero-section.css";
 
 import demoImage from "./assets/UI-Demo.jpg";
 
@@ -198,8 +199,10 @@ export function HeroSection() {
                   />
                 </li>
                 <li>
-                  <img
+                  <Image
                     src="https://cdn.magicui.design/companies/GitHub.svg"
+                    width={112}
+                    height={32}
                     className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
                     alt="GitHub"
                   />
