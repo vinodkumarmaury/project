@@ -145,7 +145,7 @@ export function HeroSection() {
             >
               <MovingBorderButton
                 borderRadius="1.75rem"
-                className="bg-white w-full p-0 overflow-hidden dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                className="bg-black w-full p-0 overflow-hidden text-white border-slate-800"
               >
                 <div className="relative w-full">
                   <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/80 to-black/20 pointer-events-none"></div>
@@ -172,7 +172,7 @@ export function HeroSection() {
         className="gradient-overlay pointer-events-none relative -z-[2] mx-auto h-[50rem] overflow-hidden [mask-image:radial-gradient(ellipse_at_center_center,#000,transparent_50%)] my-[-18.8rem]"
       >
         <div className="gradient-inner absolute inset-0 h-full w-full opacity-40"></div>
-        <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] w-[200%] rounded-[50%] border-t border-neutral-200 dark:border-slate-800 bg-background"></div>
+        <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] w-[200%] rounded-[50%] border-t border-slate-800 bg-black"></div>
       </div>
 
       <section
@@ -191,7 +191,7 @@ export function HeroSection() {
                     src="https://cdn.magicui.design/companies/Google.svg"
                     width={112}
                     height={32}
-                    className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
+                    className="h-8 w-28 px-2 brightness-0 invert"
                     alt="Google"
                   />
                 </li>
@@ -200,7 +200,7 @@ export function HeroSection() {
                     src="https://cdn.magicui.design/companies/Microsoft.svg"
                     width={112}
                     height={32}
-                    className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
+                    className="h-8 w-28 px-2 brightness-0 invert"
                     alt="Microsoft"
                   />
                 </li>
@@ -209,7 +209,7 @@ export function HeroSection() {
                     src="https://cdn.magicui.design/companies/GitHub.svg"
                     width={112}
                     height={32}
-                    className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
+                    className="h-8 w-28 px-2 brightness-0 invert"
                     alt="GitHub"
                   />
                 </li>
@@ -218,7 +218,7 @@ export function HeroSection() {
                     src="https://cdn.magicui.design/companies/Uber.svg"
                     width={112}
                     height={32}
-                    className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
+                    className="h-8 w-28 px-2 brightness-0 invert"
                     alt="Uber"
                   />
                 </li>
@@ -227,7 +227,7 @@ export function HeroSection() {
                     src="https://cdn.magicui.design/companies/Notion.svg"
                     width={112}
                     height={32}
-                    className="h-8 w-28 px-2 dark:brightness-0 dark:invert"
+                    className="h-8 w-28 px-2 brightness-0 invert"
                     alt="Notion"
                   />
                 </li>
