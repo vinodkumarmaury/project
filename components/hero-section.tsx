@@ -167,8 +167,13 @@ export function HeroSection() {
         </div>
       </section>
 
-      {/* Gradient styled div added above the clients section */}
-      <div className="[--color:var(--color-one)] pointer-events-none relative -z-[2] mx-auto h-[50rem] overflow-hidden [mask-image:radial-gradient(ellipse_at_center_center,#000,transparent_50%)] my-[-18.8rem] before:absolute before:inset-0 before:h-full before:w-full before:opacity-40 before:[background-image:radial-gradient(circle_at_bottom_center,var(--color),transparent_70%)] after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[50%] after:border-t after:border-[hsl(var(--border))] after:bg-background"></div>
+      {/* Gradient styled div added above the clients section - Fixed with explicit color values */}
+      <div 
+        className="gradient-overlay pointer-events-none relative -z-[2] mx-auto h-[50rem] overflow-hidden [mask-image:radial-gradient(ellipse_at_center_center,#000,transparent_50%)] my-[-18.8rem]"
+      >
+        <div className="gradient-inner absolute inset-0 h-full w-full opacity-40"></div>
+        <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] w-[200%] rounded-[50%] border-t border-neutral-200 dark:border-slate-800 bg-background"></div>
+      </div>
 
       <section
         id="clients"
@@ -248,6 +253,15 @@ padding-bottom: 90px;
       rgb(0, 0, 0) 100%
     );
     z-index: -1;
+  }
+  
+  /* Move inline styles to CSS classes */
+  .gradient-overlay {
+    --color-one: rgb(234, 179, 8);
+  }
+  
+  .gradient-inner {
+    background-image: radial-gradient(circle at bottom center, rgb(234, 179, 8), transparent 70%);
   }
 `}</style>
     </>
