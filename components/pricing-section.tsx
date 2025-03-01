@@ -160,7 +160,7 @@ export function PricingSection() {
             const containerClasses = plan.customStyle
               ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-black dark:text-white overflow-hidden border-[1px] border-white/30"
               : isPro 
-                ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden pro-card" // Added pro-card class
+                ? "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden border-[1px] border-yellow-400 pro-card" // Changed to yellow border
                 : "relative flex max-w-[400px] flex-col gap-6 rounded-2xl p-3.5 text-white overflow-hidden border-[1px] border-white/30";
 
             const currentPrice = isAnnual ? plan.priceYearly : plan.priceMonthly;
@@ -263,9 +263,10 @@ export function PricingSection() {
   
   /* Enhanced Pro card styling with improved specificity */
   :global(.pro-card) {
-    background: linear-gradient(to bottom right, rgba(130, 71, 229, 0.9), rgba(76, 0, 255, 0.9)) !important;
+ti    /* Removed background gradient to match other cards */
     color: white !important;
-    border: none !important;
+    border-color: #FBBF24 !important; /* Yellow border (Tailwind yellow-400 equivalent) */
+    border-width: 2px !important; /* Make border slightly thicker for emphasis */
     position: relative;
     z-index: 1;
   }
