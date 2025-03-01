@@ -118,7 +118,10 @@ export function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-black">
+    <section
+      id="pricing"
+      className="relative py-20 pt-40 bg-black" /* added extra top padding (pt-40) */
+    >
       <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <h4 className="text-xl font-bold tracking-tight text-white">
@@ -128,7 +131,7 @@ export function PricingSection() {
           Simple pricing for everyone.
           </h2>
           <p className="mt-6 text-xl leading-8 text-white/80">
-            Choose the plan that&apos;s right for you and start building today.
+          Choose an affordable plan that&apos;s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
           </p>
         </div>
 
@@ -238,6 +241,28 @@ export function PricingSection() {
           })}
         </div>
       </div>
+      <style jsx>{`
+  #pricing {
+    position: relative;
+    background: black;
+    overflow: hidden; /* Hide any part of the radial gradient that extends above */
+  }
+  #pricing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px; /* Adjust height as needed */
+    pointer-events: none;
+    background: radial-gradient(
+      circle at top center,
+      rgb(30, 30, 30) 0%,
+      transparent 80%
+    );
+    z-index: -1;
+  }
+`}</style>
     </section>
   );
 }

@@ -15,7 +15,7 @@ export default function Home() {
       {/* <FeaturesSection /> */}
       {/* <TestimonialsSection /> */}
       <PricingSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
       <CTASection />
       <Footer />
     </main>

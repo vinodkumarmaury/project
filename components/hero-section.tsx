@@ -223,6 +223,25 @@ export function HeroSection() {
           </div>
         </div>
       </section>
+      <style jsx>{`
+  #clients {
+padding-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  #clients::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 70% 50% at bottom center,
+      rgb(47, 35, 22) 0%,
+      rgb(0, 0, 0) 100%
+    );
+    z-index: -1;
+  }
+`}</style>
     </>
   );
 }

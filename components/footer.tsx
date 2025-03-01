@@ -1,88 +1,79 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12 border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold">Startup</span>
+    <footer>
+      <div className="mx-auto w-full max-w-screen-xl xl:pb-2">
+        <div className="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
+          {/* Company info */}
+          <div className="mb-12 flex-col flex gap-4">
+            <Link href="/" className="flex items-center gap-2">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Startup</span>
             </Link>
-            <p className="text-muted-foreground mb-4">
-              Building the future of software, one pixel at a time.
-            </p>
-            <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </Button>
+            <p className="max-w-xs">Building the future of software, one pixel at a time.</p>
+          </div>
+
+          {/* Footer links */}
+          <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-3">
+            <div>
+              <h2 className="mb-6 text-sm tracking-tighter font-medium text-gray-900 uppercase dark:text-white">Product</h2>
+              <ul className="gap-2 grid">
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Features</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Pricing</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Integrations</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Changelog</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Roadmap</Link></li>
+              </ul>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Product</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Features</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Pricing</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Integrations</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Changelog</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Roadmap</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">About</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Blog</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Careers</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Customers</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Subscribe</h3>
-            <p className="text-muted-foreground mb-4">
-              Get the latest news and updates delivered to your inbox.
-            </p>
-            <div className="flex space-x-2">
-              <Input type="email" placeholder="Your email" className="max-w-xs" />
-              <Button>Subscribe</Button>
+            <div>
+              <h2 className="mb-6 text-sm tracking-tighter font-medium text-gray-900 uppercase dark:text-white">Company</h2>
+              <ul className="gap-2 grid">
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">About</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Blog</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Careers</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Customers</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm tracking-tighter font-medium text-gray-900 uppercase dark:text-white">Legal</h2>
+              <ul className="gap-2 grid">
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Privacy Policy</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Terms of Service</Link></li>
+                <li><Link href="#" className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm">Cookie Policy</Link></li>
+              </ul>
             </div>
           </div>
         </div>
-        
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Startup, Inc. All rights reserved.
-          </p>
-          <div className="flex space-x-6">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Cookie Policy
-            </Link>
+
+        {/* Copyright and social links */}
+        <div className="flex flex-col sm:flex-row sm:flex sm:items-center sm:justify-between rounded-md border-neutral-700/20 py-4 px-8 gap-2">
+          <div className="flex space-x-5 sm:justify-center sm:mt-0">
+            <a className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600" href="#">
+              <Facebook className="h-4 w-4" />
+              <span className="sr-only">Facebook</span>
+            </a>
+            <a className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600" href="#">
+              <Twitter className="h-4 w-4" />
+              <span className="sr-only">Twitter</span>
+            </a>
+            <a className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600" href="#">
+              <Instagram className="h-4 w-4" />
+              <span className="sr-only">Instagram</span>
+            </a>
+            <a className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600" href="#">
+              <Linkedin className="h-4 w-4" />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+            <a className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600" href="#">
+              <Github className="h-4 w-4" />
+              <span className="sr-only">GitHub</span>
+            </a>
           </div>
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            Copyright © {new Date().getFullYear()} <a className="cursor-pointer" href="/">Startup</a>. All Rights Reserved.
+          </span>
         </div>
       </div>
     </footer>

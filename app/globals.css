@@ -402,3 +402,29 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Basic usage with a custom duration variable */
+.animate-marquee {
+  width: 200%; /* so icons can scroll across */
+  animation: marquee var(--duration, 15s) linear infinite;
+}
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
+}
+
